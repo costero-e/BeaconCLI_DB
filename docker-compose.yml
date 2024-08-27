@@ -1,0 +1,20 @@
+version: '3.1'
+
+networks:
+  proxynet:
+    external: true
+
+
+services:
+ 
+ beaconcli:
+    build:
+      context: .
+      ssh:
+        - default
+    container_name: beaconcli
+    ports:
+      - "5050:5050"
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - proxynet
