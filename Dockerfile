@@ -24,4 +24,3 @@ EXPOSE 22
 
 RUN tar -xvf CLItest.tar
 RUN bash start.sh
-
