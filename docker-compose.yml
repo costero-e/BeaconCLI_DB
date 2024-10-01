@@ -14,7 +14,7 @@ services:
         - default
     container_name: beaconcli
     ports:
-      - "5050:5050"
+      - "5060:5050"
     entrypoint: ["sh", "-c", "service ssh restart && tail -f /dev/null"]
     networks:
       - proxynet
